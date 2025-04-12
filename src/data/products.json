@@ -1,0 +1,192 @@
+{
+    "categories": [
+      {
+        "name": "Men",
+        "subCategories": [
+          {
+            "name": "Shirts",
+            "products": [
+              {
+                "id": "m_shirt_1",
+                "name": "Men's Casual Shirt",
+                "description": "A comfortable casual shirt for everyday wear.",
+                "image": "https://source.unsplash.com/featured/?mens,shirt",
+                "price": "$39.99"
+              },
+              {
+                "id": "m_shirt_2",
+                "name": "Men's Formal Shirt",
+                "description": "Classic formal shirt perfect for office and events.",
+                "image": "https://source.unsplash.com/featured/?formal,shirt",
+                "price": "$49.99"
+              }
+            ]
+          },
+          {
+            "name": "Pants",
+            "products": [
+              {
+                "id": "m_pants_1",
+                "name": "Men's Slim Fit Pants",
+                "description": "Modern slim-fit pants that add an edge to your style.",
+                "image": "https://source.unsplash.com/featured/?mens,pants",
+                "price": "$59.99"
+              },
+              {
+                "id": "m_pants_2",
+                "name": "Men's Joggers",
+                "description": "Comfortable joggers ideal for casual outings and workouts.",
+                "image": "https://source.unsplash.com/featured/?joggers,men",
+                "price": "$29.99"
+              }
+            ]
+          },
+          {
+            "name": "Shoes",
+            "products": [
+              {
+                "id": "m_shoes_1",
+                "name": "Men's Running Shoes",
+                "description": "Lightweight and durable shoes built for running and everyday use.",
+                "image": "https://source.unsplash.com/featured/?running,shoes,men",
+                "price": "$89.99"
+              }
+            ]
+          },
+          {
+            "name": "Accessories",
+            "products": [
+              {
+                "id": "m_access_1",
+                "name": "Men's Leather Belt",
+                "description": "High-quality leather belt to complement any outfit.",
+                "image": "https://source.unsplash.com/featured/?belt,men",
+                "price": "$19.99"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Women",
+        "subCategories": [
+          {
+            "name": "Dresses",
+            "products": [
+              {
+                "id": "w_dress_1",
+                "name": "Summer Dress",
+                "description": "Light and breezy dress perfect for summer days.",
+                "image": "https://source.unsplash.com/featured/?dresses,women",
+                "price": "$59.99"
+              },
+              {
+                "id": "w_dress_2",
+                "name": "Evening Gown",
+                "description": "Elegant gown for formal occasions.",
+                "image": "https://source.unsplash.com/featured/?gown,women",
+                "price": "$129.99"
+              }
+            ]
+          },
+          {
+            "name": "Tops",
+            "products": [
+              {
+                "id": "w_top_1",
+                "name": "Elegant Blouse",
+                "description": "A chic blouse that pairs well with any outfit.",
+                "image": "https://source.unsplash.com/featured/?blouse,women",
+                "price": "$39.99"
+              }
+            ]
+          },
+          {
+            "name": "Bottoms",
+            "products": [
+              {
+                "id": "w_bottom_1",
+                "name": "Skinny Jeans",
+                "description": "Trendy and comfortable skinny jeans.",
+                "image": "https://source.unsplash.com/featured/?jeans,women",
+                "price": "$49.99"
+              }
+            ]
+          },
+          {
+            "name": "Shoes",
+            "products": [
+              {
+                "id": "w_shoes_1",
+                "name": "Heeled Sandals",
+                "description": "Stylish heeled sandals for a perfect evening look.",
+                "image": "https://source.unsplash.com/featured/?sandals,women",
+                "price": "$69.99"
+              }
+            ]
+          },
+          {
+            "name": "Accessories",
+            "products": [
+              {
+                "id": "w_access_1",
+                "name": "Handbag",
+                "description": "Elegant handbag to complement your outfit.",
+                "image": "https://source.unsplash.com/featured/?handbag,women",
+                "price": "$79.99"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kids",
+        "subCategories": [
+          {
+            "name": "Clothing",
+            "products": [
+              {
+                "id": "k_clothing_1",
+                "name": "Kids T-Shirt",
+                "description": "Comfortable, vibrant T-shirt for everyday play.",
+                "image": "https://source.unsplash.com/featured/?kids,tshirt",
+                "price": "$14.99"
+              },
+              {
+                "id": "k_clothing_2",
+                "name": "Kids Jeans",
+                "description": "Durable and stylish jeans for active kids.",
+                "image": "https://source.unsplash.com/featured/?kids,jeans",
+                "price": "$24.99"
+              }
+            ]
+          },
+          {
+            "name": "Toys",
+            "products": [
+              {
+                "id": "k_toys_1",
+                "name": "Educational Toy",
+                "description": "Engaging toy to spark creativity and learning.",
+                "image": "https://source.unsplash.com/featured/?toys,kids",
+                "price": "$19.99"
+              }
+            ]
+          },
+          {
+            "name": "Shoes",
+            "products": [
+              {
+                "id": "k_shoes_1",
+                "name": "Kids Sneakers",
+                "description": "Comfortable sneakers designed for active kids.",
+                "image": "https://source.unsplash.com/featured/?kids,sneakers",
+                "price": "$29.99"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
