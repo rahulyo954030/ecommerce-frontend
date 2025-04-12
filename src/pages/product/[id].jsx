@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import categoriesData from '@/data/products.json';
 import Layout from '@/components/layout';
+import { addToCart } from '@/utils/cartStorage';
 
 const flattenProducts = (categories) => {
   const flat = [];
@@ -23,6 +24,11 @@ export default function ProductDetailPage() {
   const router = useRouter();
   const { id } = router.query;
   const [product, setProduct] = useState(null);
+
+  const handleAddToCart = () => {
+    addToCart(product);
+    alert(`${product.name} added to cart!`);
+  };
 
   useEffect(() => {
     if (id) {
@@ -68,7 +74,9 @@ export default function ProductDetailPage() {
           </p>
 
           <div className="flex gap-4">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl shadow-md transition">
+            <button 
+            onClick={handleAddToCart}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl shadow-md transition">
               Add to Cart
             </button>
             <button className="border border-blue-600 text-blue-600 hover:bg-blue-100 px-6 py-3 rounded-xl transition">

@@ -2,6 +2,7 @@ import Layout from '@/components/layout';
 import React, { useState } from 'react';
 import categoriesData from '@/data/products.json';
 import { useRouter } from 'next/router';
+import { addToCart } from '@/utils/cartStorage';
 
 /* --- SubCategoryBar Component --- */
 function SubCategoryBar({ activeCategory, subCategories, onSelectCategory }) {
@@ -27,14 +28,18 @@ function SubCategoryBar({ activeCategory, subCategories, onSelectCategory }) {
 /* --- ProductCard Component --- */
 function ProductCard({ product }) {
   const router = useRouter();
+  const handleAddToCart = () => {
+    addToCart(product);
+    alert(`${product.name} added to cart!`);
+  };
+
   return (
-    <div 
-    onClick={() => router.push(`/product/${product.id}`)}
-    className="cursor-pointer bg-gray-50 rounded-lg shadow-md overflow-hidden flex flex-col transition-transform transform hover:scale-105 hover:shadow-xl">
+    <div className="cursor-pointer bg-gray-50 rounded-lg shadow-md overflow-hidden flex flex-col transition-transform transform hover:scale-105 hover:shadow-xl">
       {/* Product Image */}
       <img
         src={product.image}
         alt={product.name}
+        onClick={() => router.push(`/product/${product.id}`)}
         className="w-full h-56 object-cover transition-transform duration-300"
       />
       {/* Product Details */}
@@ -46,7 +51,9 @@ function ProductCard({ product }) {
         <p className="text-xl text-yellow-500 font-bold mb-4">
           {product.price}
         </p>
-        <button className="mt-auto cursor-pointer bg-yellow-500 text-black py-2 px-4 rounded-full font-semibold hover:bg-yellow-600 transition-colors duration-300">
+        <button 
+        onClick={handleAddToCart}
+        className="mt-auto cursor-pointer bg-yellow-500 text-black py-2 px-4 rounded-full font-semibold hover:bg-yellow-600 transition-colors duration-300">
           Add to Cart
         </button>
       </div>
