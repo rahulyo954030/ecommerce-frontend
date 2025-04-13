@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { getCartItems, clearCart } from '@/utils/cartStorage';
 import CartItem from '@/components/cart/CartItem'; // Make sure this is the correct path
 import Layout from '@/components/layout';
+import { useRouter } from 'next/router';
 
 const CartPage = () => {
   const [cart, setCart] = useState([]);
+  const router = useRouter()
 
   useEffect(() => {
     // Retrieve cart items from localStorage when the component is mounted
@@ -19,6 +21,7 @@ const CartPage = () => {
 
   const handleCheckout = () => {
     console.log("Proceeding to checkout with the following items:", cart);
+    router.push('/checkout')
     // Add your checkout logic here (e.g., redirect to payment gateway or API call)
   };
 

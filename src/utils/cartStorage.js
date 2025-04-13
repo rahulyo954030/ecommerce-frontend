@@ -1,5 +1,6 @@
 // utils/cartStorage.js
 
+// Get cart items from localStorage
 export const getCartItems = () => {
   if (typeof window !== 'undefined') {
     const stored = localStorage.getItem('cart');
@@ -8,28 +9,36 @@ export const getCartItems = () => {
   return [];
 };
 
+// Add a product to the cart
 export const addToCart = (product) => {
   const currentCart = getCartItems();
-  const exists = currentCart.find((item) => item.id === product.id);
 
+  // Ensure price is a number
   const numericPrice = typeof product.price === 'string'
-    ? parseFloat(product.price.replace('$', ''))
+    ? parseFloat(product.price.replace(/[^0-9.]/g, ''))
     : product.price;
 
+  const existingItem = currentCart.find((item) => item.id === product.id);
+
   let updatedCart;
-  if (exists) {
+
+  if (existingItem) {
     updatedCart = currentCart.map((item) =>
       item.id === product.id
         ? { ...item, quantity: item.quantity + 1 }
         : item
     );
   } else {
-    updatedCart = [...currentCart, { ...product, price: numericPrice, quantity: 1 }];
+    updatedCart = [
+      ...currentCart,
+      { ...product, price: numericPrice, quantity: 1 },
+    ];
   }
 
   localStorage.setItem('cart', JSON.stringify(updatedCart));
 };
 
+// Update the quantity (+/-) of an item
 export const updateQuantity = (productId, change) => {
   const cart = getCartItems();
   const updatedCart = cart.map((item) => {
@@ -42,6 +51,7 @@ export const updateQuantity = (productId, change) => {
   return updatedCart;
 };
 
+// Remove an item from cart
 export const removeFromCart = (productId) => {
   const cart = getCartItems();
   const updatedCart = cart.filter((item) => item.id !== productId);
@@ -49,6 +59,7 @@ export const removeFromCart = (productId) => {
   return updatedCart;
 };
 
+// Clear the entire cart
 export const clearCart = () => {
   localStorage.removeItem('cart');
 };

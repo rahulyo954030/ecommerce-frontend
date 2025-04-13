@@ -6,6 +6,7 @@ import { addToCart } from '@/utils/cartStorage';
 
 /* --- SubCategoryBar Component --- */
 function SubCategoryBar({ activeCategory, subCategories, onSelectCategory }) {
+  
   return (
     <div className="flex justify-center space-x-6 mb-12">
       {['All', ...subCategories].map((cat) => (
